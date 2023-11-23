@@ -3,7 +3,7 @@
     Home
 {% endblock %}
 {% block content %}
-    <h2>Logged messages</h2>
+    <h2>Received messages</h2>
 
     {% if message_list %}
         <table class="message_list">
@@ -12,6 +12,7 @@
                 <th>Date</th>
                 <th>Time</th>
                 <th>Message</th>
+                <th>E-mail</th>
             </tr>
             </thead>
             <tbody>
@@ -22,6 +23,7 @@
                     <td>
                         {{ message.message }}
                     </td>
+                    <td>{{ message.email }}</td>
                 </tr>
             {% endfor %}
             </tbody>
