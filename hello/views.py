@@ -25,16 +25,8 @@ def about(request):
 def contact(request):
     return render(request, "hello/contact.html")
 
-def hello_there(request, name):
-    print(request.build_absolute_uri()) #optional
-    return render(
-        request,
-        'hello/hello_there.html',
-        {
-            'name': name,
-            'date': datetime.now()
-        }
-    )
+def clean(request):
+    return render(request, "hello/clean.html")
 
 # Add this code elsewhere in the file:
 def log_message(request):

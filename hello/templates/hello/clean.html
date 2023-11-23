@@ -1,0 +1,13 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+    Clean
+{% endblock %}
+{% block content %}
+
+    <p>Click on the button for clean your message</p>
+
+    <form method="post" action="{% url 'clean' %}">
+        {% csrf_token %}
+        <button type="submit" onclick= "" >Limpar Mensagens</button>
+    </form>
+{% endblock %}
